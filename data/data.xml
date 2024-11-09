@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <People>
     <Person>
-        <NameSurname>
-            <FirstName>DmytroO</FirstName>
+        <NameSurnameFather>
+            <FirstName>Dmytro</FirstName>
             <LastName>Ostapenko</LastName>
-        </NameSurname>
+        </NameSurnameFather>
         <OtherInfo>
             <Faculty>CSC</Faculty>
             <Chair>TPP</Chair>
