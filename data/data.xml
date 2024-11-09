@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<People>
+    <Person>
+        <NameSurname>
+            <FirstName>DmytroO</FirstName>
+            <LastName>Ostapenko</LastName>
+        </NameSurname>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TPP</Chair>
+            <Role>Aspirant</Role>
+            <ScientificInterests>Artificial Intelligence, Machine Learning</ScientificInterests>
+            <TimeTenure>12 Nov 2022</TimeTenure>
+        </OtherInfo>
+    </Person>
+    <Person>
+        <NameSurnameFather>
+            <FirstName>Olena</FirstName>
+            <LastName>Ivanova</LastName>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>Biology</Faculty>
+            <Chair>Genetics</Chair>
+            <Role>Professor</Role>
+            <ScientificInterests>Genetics, Microbiology</ScientificInterests>
+            <TimeTenure>01 Sep 2015</TimeTenure>
+        </OtherInfo>
+    </Person>
+</People>
