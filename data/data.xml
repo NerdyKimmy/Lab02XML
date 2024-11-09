@@ -4,6 +4,7 @@
         <NameSurnameFather>
             <FirstName>Dmytro</FirstName>
             <LastName>Ostapenko</LastName>
+			<Father>Batkovich</Father>
         </NameSurnameFather>
         <OtherInfo>
             <Faculty>CSC</Faculty>
@@ -17,6 +18,7 @@
         <NameSurnameFather>
             <FirstName>Olena</FirstName>
             <LastName>Ivanova</LastName>
+			<Father>Batkovna</Father>
         </NameSurnameFather>
         <OtherInfo>
             <Faculty>Biology</Faculty>

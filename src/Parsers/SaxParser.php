@@ -14,16 +14,13 @@ class SaxParser implements ParserInterface {
         while ($reader->read()) {
             switch ($reader->nodeType) {
                 case (XMLReader::ELEMENT):
-                    // Переходим к новым элементам
                     $currentElement = $reader->localName;
                     if ($currentElement == 'Person') {
-                        // Создаем новый объект Person
                         $person = new Person();
                     }
                     break;
 
                 case (XMLReader::TEXT):
-                    // Заполняем данные в Person
                     if ($person) {
                         switch ($currentElement) {
                             case 'FirstName':
@@ -31,6 +28,9 @@ class SaxParser implements ParserInterface {
                                 break;
                             case 'LastName':
                                 $person->lastName = $reader->value;
+                                break;
+                            case 'Father':
+                                $person->father = $reader->value;
                                 break;
                             case 'Faculty':
                                 $person->faculty = $reader->value;

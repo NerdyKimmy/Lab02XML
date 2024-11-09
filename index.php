@@ -33,8 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'faculty' => $_POST['faculty'] ?? '',
             'firstName' => $_POST['firstName'] ?? '',
             'lastName' => $_POST['lastName'] ?? '',
+            'father' => $_POST['father'] ?? '',
             'chair' => $_POST['chair'] ?? '',
             'role' => $_POST['role'] ?? '',
+            'dateBefore' => $_POST['dateBefore'] ?? '',
+            'dateAfter' => $_POST['dateAfter'] ?? ''
         ];
 
         $filteredPeople = PersonFilter::filter($people, $filters);
@@ -63,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php endif; ?>
 <form id="parserForm" method="POST" enctype="multipart/form-data">
     <label for="xmlFile">Upload XML File:</label>
-    <input type="file" name="xmlFile" id="xmlFile"><br><br>
+    <input type="file" name="xmlFile" id="xmlFile" accept="application/xml"><br><br>
 
     <label for="parserChoice">Choose Parser:</label>
     <select name="parserChoice" id="parserChoice">
@@ -72,20 +75,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <option value="LinqParser">LINQ</option>
     </select><br><br>
 
-    <label for="faculty">Faculty:</label>
+    <label for="faculty">Faculty<br></label>
     <input type="text" name="faculty" id="faculty"><br><br>
 
-    <label for="firstName">First Name:</label>
+    <label for="firstName">First Name<br></label>
     <input type="text" name="firstName" id="firstName"><br><br>
 
-    <label for="lastName">Last Name:</label>
+    <label for="lastName">Last Name<br></label>
     <input type="text" name="lastName" id="lastName"><br><br>
 
-    <label for="chair">Cathedra:</label>
+    <label for="father">Patronymic<br></label>
+    <input type="text" name="father" id="father"><br><br>
+
+    <label for="chair">Cathedra<br></label>
     <input type="text" name="chair" id="chair"><br><br>
 
-    <label for="role">Role:</label>
+    <label for="role">Role<br></label>
     <input type="text" name="role" id="role"><br><br>
+
+    <label for="dateBefore">Date Before<br></label>
+    <input type="date" name="dateBefore" id="dateBefore"><br><br>
+
+    <label for="dateAfter">Date After<br></label>
+    <input type="date" name="dateAfter" id="dateAfter"><br><br>
 
     <button type="submit">Parse</button>
     <button type="button" onclick="clearForm()">Clear</button>

@@ -11,6 +11,7 @@ class LinqParser implements ParserInterface {
             $person = new Person(
                 (string)$personNode->NameSurnameFather->FirstName,
                 (string)$personNode->NameSurnameFather->LastName,
+                (string)$personNode->NameSurnameFather->Father,
                 (string)$personNode->OtherInfo->Faculty,
                 (string)$personNode->OtherInfo->Chair,
                 (string)$personNode->OtherInfo->Role,

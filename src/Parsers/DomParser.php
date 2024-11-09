@@ -11,6 +11,7 @@ class DomParser implements ParserInterface {
             $person = new Person(
                 $personNode->getElementsByTagName('FirstName')->item(0)->nodeValue,
                 $personNode->getElementsByTagName('LastName')->item(0)->nodeValue,
+                $personNode->getElementsByTagName('Father')->item(0)->nodeValue,
                 $personNode->getElementsByTagName('Faculty')->item(0)->nodeValue,
                 $personNode->getElementsByTagName('Chair')->item(0)->nodeValue,
                 $personNode->getElementsByTagName('Role')->item(0)->nodeValue,
