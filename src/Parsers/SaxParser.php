@@ -52,10 +52,9 @@ class SaxParser implements ParserInterface {
                     break;
 
                 case (XMLReader::END_ELEMENT):
-                    // Когда заканчивается элемент Person, добавляем его в массив
                     if ($reader->localName == 'Person' && $person) {
                         $people[] = $person;
-                        $person = null; // Сбрасываем текущего человека для следующего
+                        $person = null;
                     }
                     break;
             }

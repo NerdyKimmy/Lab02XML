@@ -1,15 +1,15 @@
 <?php
 class Person {
-    public $firstName;
-    public $lastName;
-    public $faculty;
-    public $chair;
-    public $role;
-    public $scientificInterests;
-    public $timeTenure;
-    public $father;
+    public string $firstName;
+    public string $lastName;
+    public string $faculty;
+    public string $chair;
+    public string $role;
+    public string $scientificInterests;
+    public string $timeTenure;
+    public string $father;
 
-    public function __construct($firstName = null, $lastName = null, $father = null, $faculty= null, $chair= null, $role= null, $scientificInterests= null, $timeTenure= null) {
+    public function __construct($firstName = '', $lastName = '', $father = '', $faculty= '', $chair= '', $role= '', $scientificInterests= '', $timeTenure= '') {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->father = $father;

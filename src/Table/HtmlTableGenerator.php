@@ -5,7 +5,7 @@ class HtmlTableGenerator {
             return "<p>No matching records found.</p>";
         }
 
-        $html = "<table><tr><th>First Name</th><th>Last Name</th><th>Father</th><th>Faculty</th><th>Cathedra</th><th>Role</th><th>Scientific Interests</th><th>Time Tenure</th></tr>";
+        $html = "<table><tr><th>First Name</th><th>Last Name</th><th>Patronymic</th><th>Faculty</th><th>Cathedra</th><th>Role</th><th>Scientific Interests</th><th>Time Tenure</th></tr>";
         foreach ($people as $person) {
             $html .= "<tr>
                         <td>$person->firstName</td>

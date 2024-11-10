@@ -18,13 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (move_uploaded_file($fileTmpPath, $destinationPath)) {
             $filePath = $destinationPath;
         } else {
-            $uploadError = 'File upload failed. Please try again.';
+            $uploadError = 'Loading error, try again.';
         }
     } else {
-        $filePath = 'data/data.xml'; // Default XML file path
+        $filePath = 'data/' . 'data.xml';
+        //$uploadError = 'File is not selected or upload error.';
+
     }
 
-    if (!$uploadError) {
+    if (!$uploadError && $filePath != 'data/' . 'data.xml' ) {
         $parserChoice = $_POST['parserChoice'];
         $parserContext = new ParserContext(new $parserChoice());
         $people = $parserContext->parse($filePath);
@@ -37,11 +39,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'chair' => $_POST['chair'] ?? '',
             'role' => $_POST['role'] ?? '',
             'dateBefore' => $_POST['dateBefore'] ?? '',
-            'dateAfter' => $_POST['dateAfter'] ?? ''
+            'dateAfter' => $_POST['dateAfter'] ?? '',
         ];
 
         $filteredPeople = PersonFilter::filter($people, $filters);
         $htmlTable = HtmlTableGenerator::generate($filteredPeople);
+        echo $htmlTable;
+        exit;
+    }
+    else if (!$uploadError)
+    {
+        $parserChoice = $_POST['parserChoice'];
+        $parserContext = new ParserContext(new $parserChoice());
+        $people = $parserContext->parse($filePath);
+
+        $filters = [
+            'faculty' => $_POST['faculty'] ?? '',
+            'firstName' => $_POST['firstName'] ?? '',
+            'lastName' => $_POST['lastName'] ?? '',
+            'father' => $_POST['father'] ?? '',
+            'chair' => $_POST['chair'] ?? '',
+            'role' => $_POST['role'] ?? '',
+            'dateBefore' => $_POST['dateBefore'] ?? '',
+            'dateAfter' => $_POST['dateAfter'] ?? '',
+        ];
+
+        $filteredPeople = PersonFilter::filter($people, $filters);
+        $htmlTable = HtmlTableGenerator::generate($filteredPeople);
+        echo $htmlTable;
+        exit;
+    }
+     else {
+        echo "<p style='color: red;'>$uploadError</p>";
+        exit;
     }
 }
 ?>
@@ -52,21 +82,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>XML Parser</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script>
-        function clearForm() {
-            document.getElementById("parserForm").reset();  // Reset all form inputs
-            document.getElementById("resultTable").innerHTML = '';  // Clear table content
-        }
-    </script>
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
 <h1>XML Parser</h1>
-<?php if ($uploadError): ?>
-    <p style="color: red;"><?= $uploadError ?></p>
-<?php endif; ?>
 <form id="parserForm" method="POST" enctype="multipart/form-data">
     <label for="xmlFile">Upload XML File:</label>
-    <input type="file" name="xmlFile" id="xmlFile" accept="application/xml"><br><br>
+    <input type="file" name="xmlFile" id="xmlFile" accept=".xml"><br><br>
 
     <label for="parserChoice">Choose Parser:</label>
     <select name="parserChoice" id="parserChoice">
@@ -100,10 +122,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="date" name="dateAfter" id="dateAfter"><br><br>
 
     <button type="submit">Parse</button>
-    <button type="button" onclick="clearForm()">Clear</button>
+    <button type="button" id="clearButton">Clear</button>
 </form>
 
 <div id="resultTable"><?= $htmlTable ?? '' ?></div>
 
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
