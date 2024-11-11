@@ -8,14 +8,14 @@ class HtmlTableGenerator {
         $html = "<table><tr><th>First Name</th><th>Last Name</th><th>Patronymic</th><th>Faculty</th><th>Cathedra</th><th>Role</th><th>Scientific Interests</th><th>Time Tenure</th></tr>";
         foreach ($people as $person) {
             $html .= "<tr>
-                        <td>$person->firstName</td>
-                        <td>$person->lastName</td>
-                        <td>$person->father</td>
-                        <td>$person->faculty</td>
-                        <td>$person->chair</td>
-                        <td>$person->role</td>
-                        <td>$person->scientificInterests</td>
-                        <td>$person->timeTenure</td>
+                        <td>{$person->getFirstName()}</td>
+                        <td>{$person->getLastName()}</td>
+                        <td>{$person->getFather()}</td>
+                        <td>{$person->getFaculty()}</td>
+                        <td>{$person->getChair()}</td>
+                        <td>{$person->getRole()}</td>
+                        <td>{$person->getScientificInterests()}</td>
+                        <td>{$person->getTimeTenure()}</td>
                     </tr>";
         }
         $html .= "</table>";

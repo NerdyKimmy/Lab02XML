@@ -24,28 +24,28 @@ class SaxParser implements ParserInterface {
                     if ($person) {
                         switch ($currentElement) {
                             case 'FirstName':
-                                $person->firstName = $reader->value;
+                                $person->setFirstName($reader->value);
                                 break;
                             case 'LastName':
-                                $person->lastName = $reader->value;
+                                $person->setLastName($reader->value);
                                 break;
                             case 'Father':
-                                $person->father = $reader->value;
+                                $person->setFather($reader->value);
                                 break;
                             case 'Faculty':
-                                $person->faculty = $reader->value;
+                                $person->setFaculty($reader->value);
                                 break;
                             case 'Chair':
-                                $person->chair = $reader->value;
+                                $person->setChair($reader->value);
                                 break;
                             case 'Role':
-                                $person->role = $reader->value;
+                                $person->setRole($reader->value);
                                 break;
                             case 'ScientificInterests':
-                                $person->scientificInterests = $reader->value;
+                                $person->setScientificInterests($reader->value);
                                 break;
                             case 'TimeTenure':
-                                $person->timeTenure = $reader->value;
+                                $person->setTimeTenure($reader->value);
                                 break;
                         }
                     }
