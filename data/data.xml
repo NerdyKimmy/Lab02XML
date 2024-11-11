@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <People>
     <Person>
-        <NameSurnameFather>
-            <FirstName>ZOV</FirstName>
-            <LastName>Ostapenko</LastName>
-			<Father>Batkovich</Father>
-        </NameSurnameFather>
-        <OtherInfo>
+	 <OtherInfo>
             <Faculty>CSC</Faculty>
             <Chair>TPP</Chair>
             <Role>Aspirant</Role>
-            <ScientificInterests>Artificial Intelligence, Machine Learning</ScientificInterests>
+            
             <TimeTenure>12 Nov 2022</TimeTenure>
         </OtherInfo>
+        <NameSurnameFather>
+            <Father>Batkovich</Father>
+            <LastName>Ostapenko</LastName>
+			
+			
+        </NameSurnameFather>
+       
     </Person>
     <Person>
         <NameSurnameFather>

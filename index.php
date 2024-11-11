@@ -4,7 +4,7 @@ require_once 'src/Models/PersonFilter.php';
 require_once 'src/Table/HtmlTableGenerator.php';
 require_once 'src/Parsers/SaxParser.php';
 require_once 'src/Parsers/DomParser.php';
-require_once 'src/Parsers/LinqParser.php';
+require_once 'src/Parsers/SimpleXmlParser.php';
 
 $htmlTable = '';
 $uploadError = '';
@@ -21,12 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $uploadError = 'Loading error, try again.';
         }
     } else {
-        $filePath = 'data/' . 'data.xml';
-        //$uploadError = 'File is not selected or upload error.';
+        //$filePath = 'data/' . 'data.xml';
+        $uploadError = 'File is not selected or upload error.';
 
     }
 
-    if (!$uploadError && $filePath != 'data/' . 'data.xml' ) {
+    if (!$uploadError && $filePath) {
         $parserChoice = $_POST['parserChoice'];
         $parserContext = new ParserContext(new $parserChoice());
         $people = $parserContext->parse($filePath);
@@ -47,29 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo $htmlTable;
         exit;
     }
-    else if (!$uploadError)
-    {
-        $parserChoice = $_POST['parserChoice'];
-        $parserContext = new ParserContext(new $parserChoice());
-        $people = $parserContext->parse($filePath);
-
-        $filters = [
-            'faculty' => $_POST['faculty'] ?? '',
-            'firstName' => $_POST['firstName'] ?? '',
-            'lastName' => $_POST['lastName'] ?? '',
-            'father' => $_POST['father'] ?? '',
-            'chair' => $_POST['chair'] ?? '',
-            'role' => $_POST['role'] ?? '',
-            'dateBefore' => $_POST['dateBefore'] ?? '',
-            'dateAfter' => $_POST['dateAfter'] ?? '',
-        ];
-
-        $filteredPeople = PersonFilter::filter($people, $filters);
-        $htmlTable = HtmlTableGenerator::generate($filteredPeople);
-        echo $htmlTable;
-        exit;
-    }
-     else {
+    else {
         echo "<p style='color: red;'>$uploadError</p>";
         exit;
     }
@@ -94,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <select name="parserChoice" id="parserChoice">
         <option value="SaxParser">SAX</option>
         <option value="DomParser">DOM</option>
-        <option value="LinqParser">LINQ</option>
+        <option value="SimpleXmlParser">SimpleXml</option>
     </select><br><br>
 
     <label for="faculty">Faculty<br></label>

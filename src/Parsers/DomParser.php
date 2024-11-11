@@ -7,20 +7,37 @@ class DomParser implements ParserInterface {
         $people = [];
         $dom = new DOMDocument();
         $dom->load($filePath);
+
         foreach ($dom->getElementsByTagName('Person') as $personNode) {
+            $firstName = $this->getElementValue($personNode, 'FirstName');
+            $lastName = $this->getElementValue($personNode, 'LastName');
+            $father = $this->getElementValue($personNode, 'Father');
+            $faculty = $this->getElementValue($personNode, 'Faculty');
+            $chair = $this->getElementValue($personNode, 'Chair');
+            $role = $this->getElementValue($personNode, 'Role');
+            $scientificInterests = $this->getElementValue($personNode, 'ScientificInterests');
+            $timeTenure = $this->getElementValue($personNode, 'TimeTenure');
+
             $person = new Person(
-                $personNode->getElementsByTagName('FirstName')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('LastName')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('Father')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('Faculty')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('Chair')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('Role')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('ScientificInterests')->item(0)->nodeValue,
-                $personNode->getElementsByTagName('TimeTenure')->item(0)->nodeValue
+                $firstName,
+                $lastName,
+                $father,
+                $faculty,
+                $chair,
+                $role,
+                $scientificInterests,
+                $timeTenure
             );
+
             $people[] = $person;
         }
+
         return $people;
+    }
+
+    private function getElementValue(DOMNode $node, $tagName, $default = '') {
+        $elements = $node->getElementsByTagName($tagName);
+        return $elements->length > 0 ? $elements->item(0)->nodeValue : $default;
     }
 }
 ?>
