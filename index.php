@@ -6,6 +6,8 @@ require_once 'src/Parsers/SaxParser.php';
 require_once 'src/Parsers/DomParser.php';
 require_once 'src/Parsers/SimpleXmlParser.php';
 
+
+
 $htmlTable = '';
 $uploadError = '';
 
@@ -60,23 +62,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>XML Parser</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
-<h1>XML Parser</h1>
+<h1>XML Parser <i class="fa-solid fa-table"></i> </h1>
 <form id="parserForm" method="POST" enctype="multipart/form-data">
-    <label for="xmlFile">Upload XML File:</label>
+    <label for="xmlFile">Upload XML File  <i class="fa-regular fa-file"></i></label>
     <input type="file" name="xmlFile" id="xmlFile" accept=".xml"><br><br>
 
-    <label for="parserChoice">Choose Parser:</label>
+    <label for="parserChoice">Choose Parser <i class="fa-solid fa-list"></i></label>
     <select name="parserChoice" id="parserChoice">
         <option value="SaxParser">SAX</option>
         <option value="DomParser">DOM</option>
         <option value="SimpleXmlParser">SimpleXml</option>
-    </select><br><br>
-
-    <label for="faculty">Faculty<br></label>
-    <input type="text" name="faculty" id="faculty"><br><br>
+    </select>
+    <br><br>
 
     <label for="firstName">First Name<br></label>
     <input type="text" name="firstName" id="firstName"><br><br>
@@ -87,17 +88,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="father">Patronymic<br></label>
     <input type="text" name="father" id="father"><br><br>
 
+    <label for="faculty">Faculty <br></label>
+    <input type="text" name="faculty" id="faculty"><br><br>
+
     <label for="chair">Cathedra<br></label>
     <input type="text" name="chair" id="chair"><br><br>
 
     <label for="role">Role<br></label>
     <input type="text" name="role" id="role"><br><br>
 
-    <label for="dateBefore">Date Before<br></label>
-    <input type="date" name="dateBefore" id="dateBefore"><br><br>
+    <label for="dateBefore">Date Before</label>
+    <label style="margin-left: 111px;" for="dateAfter">Date After<br></label>
+    <input type="date" name="dateBefore" id="dateBefore">
 
-    <label for="dateAfter">Date After<br></label>
-    <input type="date" name="dateAfter" id="dateAfter"><br><br>
+    <input style="margin-left: 20px;" type="date" name="dateAfter" id="dateAfter"><br><br>
 
     <button type="submit">Parse</button>
     <button type="button" id="clearButton">Clear</button>

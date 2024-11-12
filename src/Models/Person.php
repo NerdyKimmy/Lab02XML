@@ -2,12 +2,13 @@
 class Person {
     private string $firstName;
     private string $lastName;
+    private string $father;
     private string $faculty;
     private string $chair;
     private string $role;
     private string $scientificInterests;
     private string $timeTenure;
-    private string $father;
+
 
     public function __construct($firstName = '', $lastName = '', $father = '', $faculty = '', $chair = '', $role = '', $scientificInterests = '', $timeTenure = '') {
         $this->firstName = $firstName;
@@ -20,7 +21,6 @@ class Person {
         $this->timeTenure = $timeTenure;
     }
 
-    // Getters
     public function getFirstName(): string {
         return $this->firstName;
     }
@@ -53,7 +53,6 @@ class Person {
         return $this->timeTenure;
     }
 
-    // Setters
     public function setFirstName(string $firstName): void {
         $this->firstName = $firstName;
     }

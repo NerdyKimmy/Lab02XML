@@ -1,5 +1,5 @@
 <?php
-class PersonFilter {
+class   PersonFilter {
     public static function filter(array $people, array $filters) {
         return array_filter($people, function($person) use ($filters) {
 

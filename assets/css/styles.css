@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Uni sans", serif;
+    font-size: 20px;
     margin: 20px;
 }
 
@@ -11,28 +12,42 @@ form {
     margin-bottom: 20px;
 }
 
-label {
-    font-weight: bold;
-}
+
 
 input[type="text"], select {
+    font-family: "Uni sans", serif;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+input[type="file"], select {
+    font-family: "Uni sans", serif;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+input[type="date"], select {
     margin-bottom: 10px;
     padding: 5px;
     width: 200px;
 }
 
 button {
-    padding: 5px 10px;
-    background-color: #007bff;
+    font-family: "Uni sans", serif;
+    padding: 10px 15px;
+    background-color: #FFB6C1;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
+    font-size: 20px;
+    border-radius: 10px;
     margin-right: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #DB7093;
 }
 
 table {
@@ -48,7 +63,7 @@ table, th, td {
 
 th {
     background-color: #f2f2f2;
-    font-weight: bold;
+
 }
 
 tr:nth-child(even) {
