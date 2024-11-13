@@ -3,16 +3,14 @@
     <Person>
 	 <OtherInfo>
             <Faculty>CSC</Faculty>
-            <Chair>TPP</Chair>
-            <Role>Aspirant</Role>
-            
-            <TimeTenure>12 Nov 2022</TimeTenure>
+            <Chair>TTP</Chair>
+            <Role>Aspirant</Role>            
+            <TimeTenure>05 Sep 2022</TimeTenure>
         </OtherInfo>
         <NameSurnameFather>
             <Father>Batkovich</Father>
+			<FirstName>Dmytro</FirstName>
             <LastName>Ostapenko</LastName>
-			
-			
         </NameSurnameFather>
        
     </Person>
@@ -20,14 +18,153 @@
         <NameSurnameFather>
             <FirstName>Olena</FirstName>
             <LastName>Ivanova</LastName>
-			<Father>Batkovna</Father>
+			<Father>Zenoviivna</Father>
         </NameSurnameFather>
         <OtherInfo>
-            <Faculty>Biology</Faculty>
-            <Chair>Genetics</Chair>
+            <Faculty>MechMath</Faculty>
+            <Chair>ACM</Chair>
             <Role>Professor</Role>
-            <ScientificInterests>Genetics, Microbiology</ScientificInterests>
+            <ScientificInterests>Math Analysis, Number theory</ScientificInterests>
             <TimeTenure>01 Sep 2015</TimeTenure>
         </OtherInfo>
     </Person>
+	    <Person>
+        <NameSurnameFather>
+            <FirstName>Stepan</FirstName>
+            <LastName>Shkilniak</LastName>
+			<Father>Stepanovich</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TTP</Chair>
+            <Role>Doctor</Role>
+            <ScientificInterests>Math Logic</ScientificInterests>
+            <TimeTenure>20 Dec 2010</TimeTenure>
+        </OtherInfo>
+    </Person>
+	    <Person>
+        <NameSurnameFather>
+            <FirstName>Bohdan</FirstName>
+            <LastName>Vykhovanets</LastName>
+			<Father>Ivanovich</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TC</Chair>
+            <Role>Student</Role>
+            <ScientificInterests></ScientificInterests>
+            <TimeTenure>20 Aug 2025</TimeTenure>
+        </OtherInfo>
+    </Person>
+	<Person>
+	
+	       <OtherInfo>
+           <Faculty>CSC</Faculty>
+           <Chair>MI</Chair>
+           <Role>Assistant</Role>
+           <ScientificInterests> Differential equation </ScientificInterests>
+           <TimeTenure>10 Jun 2021</TimeTenure>
+        </OtherInfo>
+        <NameSurnameFather>
+            
+            <LastName>Vasin</LastName>
+			<Father>Oleksijovych</Father>
+			<FirstName>Pavel</FirstName>
+        </NameSurnameFather>
+
+    </Person>
+	
+		<Person>
+	
+	       <OtherInfo>
+		   <ScientificInterests> Undefined coordinates method </ScientificInterests>
+           <Faculty>CSC</Faculty>
+           <Role>Professor</Role>
+           <TimeTenure>28 Feb 2028</TimeTenure>
+		   <Chair>MI</Chair>
+        </OtherInfo>
+        <NameSurnameFather>
+            <LastName>Televnyi</LastName>
+			<Father>Oleksandrovych</Father>
+			<FirstName>Anton</FirstName>
+        </NameSurnameFather>
+
+    </Person>
+	
+		<Person>
+	
+	       <OtherInfo>
+		   <ScientificInterests> OOP and programming patterns </ScientificInterests>
+           <Faculty>CSC</Faculty>
+           <Role>Assistant</Role>
+           <TimeTenure>28 May 2021</TimeTenure>
+		   <Chair>TTP</Chair>
+        </OtherInfo>
+        <NameSurnameFather>
+			<FirstName>Anton</FirstName>
+			<LastName>Svystunov</LastName>
+			<Father>Oleksandrovych</Father>
+        </NameSurnameFather>
+
+    </Person>
+	
+	<Person>
+        <NameSurnameFather>
+            <FirstName>Andrii</FirstName>
+            <LastName>Zakharchenko</LastName>
+			<Father>Batkovich</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TTP</Chair>
+            <Role>Student</Role>
+            <ScientificInterests></ScientificInterests>
+            <TimeTenure>20 Aug 2025</TimeTenure>
+        </OtherInfo>
+    </Person>
+		<Person>
+        <NameSurnameFather>
+            <FirstName>Tsykaliuk</FirstName>
+            <LastName>Maxim</LastName>
+			<Father>Igorovych</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TK</Chair>
+            <Role>Student</Role>
+            <ScientificInterests></ScientificInterests>
+            <TimeTenure>20 Aug 2025</TimeTenure>
+        </OtherInfo>
+    </Person>
+	  
+	<Person>
+        <NameSurnameFather>
+            <FirstName>Oleksandr</FirstName>
+            <LastName>Voina</LastName>
+			<Father>Andriyovych</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>AS</Chair>
+            <Role>Docent</Role>
+            <ScientificInterests>Bologna System</ScientificInterests>
+            <TimeTenure>20 Mar 2015</TimeTenure>
+        </OtherInfo>
+    </Person>
+	
+	<Person>
+        <NameSurnameFather>
+            <FirstName>Ljudmyla</FirstName>
+            <LastName>Omelchiuk</LastName>
+			<Father>Leonidivna</Father>
+        </NameSurnameFather>
+        <OtherInfo>
+            <Faculty>CSC</Faculty>
+            <Chair>TTP</Chair>
+            <Role>Docent</Role>
+            <ScientificInterests> OOP and programming patterns</ScientificInterests>
+            <TimeTenure>06 Oct 2012</TimeTenure>
+        </OtherInfo>
+    </Person>
+	
 </People>
