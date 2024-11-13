@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $uploadError = 'Loading error, try again.';
         }
     } else {
+        //$filePath = 'data/' . 'data.xml';
         $uploadError = 'File is not selected or upload error.';
 
     }
